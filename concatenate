@@ -1,0 +1,50 @@
+echo "enter file name1"
+read f1
+Dept. Of Computer Applications , SNGCE
+echo "enter filename2"
+read f2
+if test -e $f1 -a -e $f2
+then
+cat $f1 $f2 >f3
+echo “File is:”
+cat f3
+else
+echo "file not found"
+fi
+
+
+
+output
+
+mlm@mlm-OptiPlex-3020:~/Desktop/alan$ chmod +x concat.sh
+mlm@mlm-OptiPlex-3020:~/Desktop/alan$ ./concat.sh
+enter file name1
+even.sh
+./concat.sh: line 3: Dept.: command not found
+enter filename2
+large.sh
+“File is:”
+check_odd_even(){
+if [ $((number%2)) -eq 0 ]; then
+echo "$number is even"
+else
+echo"$number is odd"
+fi
+}
+echo "please enter a number:"
+read number
+check_odd_even "$number"
+
+echo "enter three numbers"
+read num1
+read num2
+read num3
+if [ $num1 -gt $num2 -a $num1 -gt $num3 ]
+then
+echo "$num1 is greater"
+elif [ $num2 -gt $num3 ]
+then
+echo "$num2 is greater"
+else
+echo "$num3 is greater"
+fi
